@@ -176,7 +176,7 @@ if (selected == 'Heart Disease Prediction'):
       with col1:
         LiverFunctionTest=st.text_input("Liver Function Test")
   
-      liver_dia = " "
+      liver_dia = ''
       if st.button("Liver Disease Test Result"):
         liver_prediction=liver_disease_model.predict([[Age,Gender,BMI,AlcoholConsumption,Smoking,GeneticRisk,PhysicalActivity,Diabetes,Hypertension,LiverFunctionTest]])
         if(liver_prediction[0]==1):
