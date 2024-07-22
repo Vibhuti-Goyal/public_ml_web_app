@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 diabetes_model = pickle.load(open('diabetes_saved_', 'rb'))
 
 heart_disease_model = pickle.load(open('heart_disease_saved', 'rb'))
-
+blood_drop = "🩸"
 
 
 
@@ -19,7 +19,7 @@ with st.sidebar:
                           
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',],
-                          icons=['U+1FA78','heart'],
+                          icons=['blood_drop','heart'],
                           default_index=0)
     
     
