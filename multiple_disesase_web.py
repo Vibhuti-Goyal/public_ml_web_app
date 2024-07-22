@@ -146,48 +146,49 @@ if (selected == 'Heart Disease Prediction'):
           heart_diagnosis = 'The person does not have any heart disease'
         
     st.success(heart_diagnosis)
-  
-  
-    #liver disease prediction page
-    if(selected == 'Liver Disease Prediction'):
-  
-      st.title("Liver disease Prediction using ML")
-      col1,col2,col3=st.columns(3)
-  
-      with col1:
-        Age=st.text_input("Age")
-      with col2:
-        Gender=st.text_input("Gender: Male (0) or Female (1)")
-      with col3:
-         BMI=st.text_input("Body Mass Index")
-  
-      with col1:
-        AlcoholConsumption=st.text_input("Alcohol consumption")
-      with col2:
-        Smoking=st.text_input("Smoking: No (0) or Yes (1) ")
-      with col3:
-        GeneticRisk=st.text_input("Genetic Risk: Low (0), Medium (1), High (2)")
-      with col1:
-        PhysicalActivity=st.text_input("Physical Activity")
-      with col2:
-        Diabetes=st.text_input("Diabetes: No (0) or Yes (1)")
-      with col3:
-        Hypertension=st.text_input("Hypertension: No (0) or Yes (1)")
-      with col1:
-        LiverFunctionTest=st.text_input("Liver Function Test")
-  
-      liver_dia = ''
-      if st.button("Liver Disease Test Result"):
-        liver_prediction=liver_disease_model.predict([[Age,Gender,BMI,AlcoholConsumption,Smoking,GeneticRisk,PhysicalActivity,Diabetes,Hypertension,LiverFunctionTest]])
-        if(liver_prediction[0]==1):
-          liver_dia="Person is having Liver disease"
-        else:
-          liver_dia="Person does not have any Liver disease"
-    st.success(liver_dia)
+
+
+# Liver disease prediction page
+if(selected == 'Liver Disease Prediction'):
+
+  st.title("Liver disease Prediction using ML")
+  col1, col2, col3 = st.columns(3)
+
+  with col1:
+    Age = st.text_input("Age")
+  with col2:
+    Gender = st.text_input("Gender: Male (0) or Female (1)")
+  with col3:
+    BMI = st.text_input("Body Mass Index")
+
+  with col1:
+    AlcoholConsumption = st.text_input("Alcohol consumption")
+  with col2:
+    Smoking = st.text_input("Smoking: No (0) or Yes (1) ")
+  with col3:
+    GeneticRisk = st.text_input("Genetic Risk: Low (0), Medium (1), High (2)")
+  with col1:
+    PhysicalActivity = st.text_input("Physical Activity")
+  with col2:
+    Diabetes = st.text_input("Diabetes: No (0) or Yes (1)")
+  with col3:
+    Hypertension = st.text_input("Hypertension: No (0) or Yes (1)")
+  with col1:
+    LiverFunctionTest = st.text_input("Liver Function Test")
+
+  liver_diagnosis = ''
+  if st.button("Liver Disease Test Result"):
+    # Convert inputs to numerical values (handle potential errors)
+    liver_prediction = liver_disease_model.predict([[int(Age), int(Gender), float(BMI), float(AlcoholConsumption), int(Smoking), int(GeneticRisk), float(PhysicalActivity), int(Diabetes), int(Hypertension), int(LiverFunctionTest)]])
+    if (liver_prediction[0] == 1):
+      liver_diagnosis = "Person is having Liver disease"
+    else:
+      liver_diagnosis = "Person does not have any Liver disease"
+   
+
+  st.success(liver_diagnosis)
 
     
-    
-        
     
     
 
