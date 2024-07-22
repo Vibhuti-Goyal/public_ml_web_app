@@ -179,7 +179,7 @@ if(selected == 'Liver Disease Prediction'):
   liver_diagnosis = ''
   if st.button("Liver Disease Test Result"):
     # Convert inputs to numerical values (handle potential errors)
-    liver_prediction = liver_disease_model.predict([[int(Age), int(Gender), float(BMI), float(AlcoholConsumption), int(Smoking), int(GeneticRisk), float(PhysicalActivity), int(Diabetes), int(Hypertension), int(LiverFunctionTest)]])
+    liver_prediction = liver_disease_model.predict([[Age,Gender,BMI,AlcoholConsumption,Smoking,GeneticRisk,PhysicalActivity,Diabetes,Hypertension,LiverFunctionTest]])
     if (liver_prediction[0] == 1):
       liver_diagnosis = "Person is having Liver disease"
     else:
