@@ -149,7 +149,7 @@ if (selected == 'Heart Disease Prediction'):
   
   
   #liver disease prediction page
-  if(selected=='Liver Disease Prediction'):
+  if(selected == 'Liver Disease Prediction'):
 
     st.title("Liver disease Prediction using ML")
     col1,col2,col3=st.columns(3)
