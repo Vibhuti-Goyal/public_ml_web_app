@@ -175,7 +175,7 @@ if(selected == 'Liver Disease Prediction'):
     Hypertension = st.text_input("Hypertension: No (0) or Yes (1)")
   with col1:
     LiverFunctionTest = st.text_input("Liver Function Test")
-
+  # code for Prediction
   liver_diagnosis = ''
   if st.button("Liver Disease Test Result"):
     # Convert inputs to numerical values (handle potential errors)
