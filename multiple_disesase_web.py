@@ -25,7 +25,7 @@ with st.sidebar:
                            'Heart Disease Prediction',
                           'Liver Disease Prediction'],
                            menu_icon='👨🏻‍⚕️',
-                          icons=['🩸','🫀','activity],
+                          icons=['person','heart','activity],
                           default_index=0)
     
     
