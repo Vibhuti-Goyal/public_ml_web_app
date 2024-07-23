@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Health Assistant",
                    layout="wide",
-                   page_icon="🩺")
+                   page_icon="🏥")
 # loading the saved models
 
 diabetes_model = pickle.load(open('diabetes_saved_', 'rb'))
@@ -24,7 +24,6 @@ with st.sidebar:
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
                           'Liver Disease Prediction'],
-                           menu_icon='🏥',
                           icons=['person','heart','activity'],
                           default_index=0)
     
