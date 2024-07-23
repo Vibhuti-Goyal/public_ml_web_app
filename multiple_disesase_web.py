@@ -5,6 +5,7 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="Health Assistant Website",
                    layout="wide",
                    page_icon="🏥")
+st.write("This website is a project prototype and is not intended for public use")
 # loading the saved models
 
 diabetes_model = pickle.load(open('diabetes_saved_', 'rb'))
@@ -26,7 +27,7 @@ with st.sidebar:
                           'Liver Disease Prediction'],
                           icons=['person','heart','activity'],
                           default_index=0)
-  st.write("This website is a project prototype and is not intended for public use")
+ 
     
     
 # Diabetes Prediction Page
