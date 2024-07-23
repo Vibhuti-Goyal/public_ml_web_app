@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Health Assistant",
+st.set_page_config(page_title="Health Assistant Website",
                    layout="wide",
                    page_icon="🏥")
 # loading the saved models
@@ -19,13 +19,14 @@ liver_disease_model=pickle.load(open('Liver_disease_saved','rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('Multiple Disease Prediction System (By-Vibhuti Goyal)',
                           
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
                           'Liver Disease Prediction'],
                           icons=['person','heart','activity'],
                           default_index=0)
+  st.write("This website is a project prototype and is not intended for public use")
     
     
 # Diabetes Prediction Page
