@@ -188,12 +188,3 @@ if(selected == 'Liver Disease Prediction'):
    
 
   st.success(liver_diagnosis)
-
-    
-    
-    
-
-
-    
-        
-    
